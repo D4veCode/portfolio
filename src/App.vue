@@ -2,7 +2,7 @@
   <div id="app">
      <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
       <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-block d-lg-none">Start Bootstrap</span>
+        <span class="d-block d-lg-none">¡Bienvenido!</span>
         <span class="d-none d-lg-block">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="./assets/img/portafolio_i.jpg" alt="">
         </span>
@@ -39,95 +39,9 @@
      
       <about :about="misdatos"></about>
       <experience :experiences="experiences"></experience>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
-        <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
-
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">University of Colorado Boulder</h3>
-              <div class="subheading mb-3">Bachelor of Science</div>
-              <div>Computer Science - Web Development Track</div>
-              <p>GPA: 3.23</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2006 - May 2010</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">James Buchanan High School</h3>
-              <div class="subheading mb-3">Technology Magnet Program</div>
-              <p>GPA: 3.56</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">August 2002 - May 2006</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
-        <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
-
-          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-          <ul class="list-inline list-icons">
-            <li class="list-inline-item">
-              <i class="devicons devicons-html5"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-css3"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-jquery"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-sass"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-less"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-bootstrap"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-wordpress"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-grunt"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-gulp"></i>
-            </li>
-            <li class="list-inline-item">
-              <i class="devicons devicons-npm"></i>
-            </li>
-          </ul>
-
-          <div class="subheading mb-3">Workflow</div>
-          <ul class="fa-ul mb-0">
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Mobile-First, Responsive Design</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Browser Testing &amp; Debugging</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Cross Functional Teams</li>
-            <li>
-              <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-          </ul>
-        </div>
-      </section>
+      <education :education="education"></education>
+      <skills :flujo-trabajo="workflow"></skills>
+     
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
@@ -191,12 +105,21 @@
 <script>
 import About from './components/About.vue';
 import Experience from './components/Experience.vue'
+import axios from 'axios'
+import Education from './components/Education.vue'
+import Skills from './components/Skills.vue'
 
 export default {
   name: 'app',
+  mounted(){
+    console.log("Componente cargado...");
+    this.prueba();
+  },
   components: {
     'about': About,
-    'experience': Experience
+    'experience': Experience,
+    'education': Education,
+    'skills': Skills
   },
   data(){
     return{
@@ -216,9 +139,28 @@ export default {
       experiences:[
         {job: 'Asistente Drupal', company:'Strategy Plaza', description:'Asistente de la empresa Strategy Plaza, actualiza, crea y modifica sitios web basados en Drupal 8.', date: 'Ene 2018 - Presente'},
       
-      ]
+      ],
+      education:[{school:'Universidad Católica Andrés Bello', degree:'6to Semestre de Ingeniería Infomática', date:'Sept 2015 - Presente'},
+                 {school:'U.E Colegio Valle Alto', degree:'Bachiller en Ciencias', date:'Sept 2010 - Jul 2015'}
+      ],
+      workflow: {
+        first: 'Mobile-First, Responsive Design',
+        second: ' Agile Development & Scrum',
+        third: 'Cross Functional Teams'
+      }
 
       
+    }
+  },
+  methods: {
+    prueba: function(){
+      axios.get('https://swapi.co/api/people')
+      .then(res=>{
+        console.log(res.data);
+      })
+      .catch(error=>{
+        console.log(error);
+      })
     }
   }
  
