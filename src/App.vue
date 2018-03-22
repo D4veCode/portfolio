@@ -113,7 +113,7 @@ export default {
   name: 'app',
   mounted(){
     console.log("Componente cargado...");
-    this.prueba();
+    this.getmisdatos();
   },
   components: {
     'about': About,
@@ -125,7 +125,7 @@ export default {
     return{
       misdatos: {
         name: 'David A.',
-        lastName: 'Serrada B.',
+        lastname: 'Serrada B.',
         address: 'Caracas, Venezuela',
         phone: '+58(412)615-04-92',
         email: 'davidasb.27@gmail.com',
@@ -153,10 +153,12 @@ export default {
     }
   },
   methods: {
-    prueba: function(){
-      axios.get('https://swapi.co/api/people')
+    getmisdatos: function(){
+      axios.get('http://172.31.38.32:8000/api/about/6')
       .then(res=>{
         console.log(res.data);
+        this.misdatos = res.data.datos;
+        
       })
       .catch(error=>{
         console.log(error);
