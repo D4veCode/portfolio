@@ -1,7 +1,7 @@
 <template>
    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5">Skills</h2>
+          <h2 class="mb-5">Habilidades</h2>
 
           <div class="subheading mb-3">Lenguajes de Programación &amp; Herramientas</div>
           <ul class="list-inline list-icons">
@@ -47,7 +47,7 @@
               <i class="fa-li fa fa-check"></i>
               {{flujoTrabajo.second}}
             </li>
-            <li>
+            <li v-if="flujoTrabajo.third != ''">
               <i class="fa-li fa fa-check"></i>
               {{flujoTrabajo.third}}
             </li>

@@ -1,7 +1,7 @@
 <template>
   <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5">Education</h2>
+          <h2 class="mb-5">Educacion</h2>
 
         <schools v-for="(schools, index) in education" :schools="schools" :key="index"></schools>
          
