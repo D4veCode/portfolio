@@ -85,11 +85,11 @@ export default {
         name: 'David A.',
         lastname: 'Serrada B.',
         address: 'Caracas, Venezuela',
-        phone: '+58(412)615-04-92',
+        phone: '+58 (412) 615-04-92',
         email: 'davidasb.developer@gmail.com',
         description: 'Desarollador web de 21 años, siempre en busca de aprender nuevas cosas y reforzar las aprendidas. ',
         instagram: 'https://www.instagram.com/davidalejandrosb/',
-        twitter: 'https://twitter.com/DavidWrote',
+        twitter: ' ',
         linkedin: 'https://www.linkedin.com/in/david-serrada-dev/',
         github: 'https://github.com/D4veCode'
 
