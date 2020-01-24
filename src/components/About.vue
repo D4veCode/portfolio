@@ -5,7 +5,7 @@
             <span class="text-primary">{{about.lastname}}</span>
           </h1>
           <div class="subheading mb-5">{{about.address}}· {{about.phone}} ·
-            <a href="mailto:${about.email}" target="blank">{{about.email}}</a>
+            <a :href="`mailto:${about.email}`" target="blank">{{about.email}}</a>
           </div>
           <p class="mb-5">{{about.description}}</p>
           <ul class="list-inline list-social-icons mb-0">

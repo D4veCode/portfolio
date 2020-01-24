@@ -89,7 +89,7 @@ export default {
         email: 'davidasb.developer@gmail.com',
         description: 'Desarollador web de 21 años, siempre en busca de aprender nuevas cosas y reforzar las aprendidas. ',
         instagram: 'https://www.instagram.com/davidalejandrosb/',
-        twitter: ' ',
+        twitter: '',
         linkedin: 'https://www.linkedin.com/in/david-serrada-dev/',
         github: 'https://github.com/D4veCode'
 
