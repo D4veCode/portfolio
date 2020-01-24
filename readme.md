@@ -1,1 +1,1 @@
-Hola es una app en Vue
+## App en Vue que sirve como portafolio
