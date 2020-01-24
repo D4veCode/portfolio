@@ -12,7 +12,7 @@
               <i class="devicons devicons-css3"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-javascript"></i>
+              <i class="devicons devicons-javascript_badge"></i>
             </li>
             <li class="list-inline-item">
               <i class="devicons devicons-jquery"></i>
@@ -27,13 +27,25 @@
               <i class="devicons devicons-bootstrap"></i>
             </li>
             <li class="list-inline-item">
-              <i class="devicons devicons-drupal"></i>
-            </li>
-            <li class="list-inline-item">
               <i class="devicons devicons-react"></i>
             </li>
             <li class="list-inline-item">
               <i class="devicons devicons-npm"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-python"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-laravel"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-postgresql"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-mongodb"></i>
+            </li>
+            <li class="list-inline-item">
+              <i class="devicons devicons-heroku"></i>
             </li>
           </ul>
 

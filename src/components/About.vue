@@ -26,7 +26,7 @@
               </a>
             </li>
             <li class="list-inline-item" v-if="about.linkedin != ''">
-              <a href="#">
+              <a :href="about.linkedin">
                 <span class="fa-stack fa-lg">
                   <i class="fa fa-circle fa-stack-2x"></i>
                   <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
