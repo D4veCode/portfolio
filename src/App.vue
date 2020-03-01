@@ -87,7 +87,7 @@ export default {
         address: 'Caracas, Venezuela',
         phone: '+58 (412) 615-04-92',
         email: 'davidasb.developer@gmail.com',
-        description: 'Desarollador web de 21 años, siempre en busca de aprender nuevas cosas y reforzar las aprendidas. ',
+        description: 'Desarollador web de 22 años, siempre en busca de aprender nuevas cosas y reforzar las aprendidas. ',
         instagram: 'https://www.instagram.com/davidalejandrosb/',
         twitter: '',
         linkedin: 'https://www.linkedin.com/in/david-serrada-dev/',
